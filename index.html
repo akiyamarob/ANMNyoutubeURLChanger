@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube URL Fixer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="converter" aria-labelledby="app-title">
+        <header class="app-header">
+          <h1 id="app-title">YouTube URL Fixer</h1>
+          <p>YouTubeのURLを短い共有URLに変換します。</p>
+        </header>
+
+        <div class="field-group">
+          <div class="field-heading">
+            <label for="source-url">変換前</label>
+            <button class="secondary-button" id="paste-button" type="button">ペースト</button>
+          </div>
+          <textarea
+            id="source-url"
+            inputmode="url"
+            placeholder="https://www.youtube.com/shorts/xxxxxxxxxxx"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="field-group">
+          <div class="field-heading">
+            <label for="result-url">変換後</label>
+            <button class="primary-button" id="copy-button" type="button">コピー</button>
+          </div>
+          <textarea id="result-url" readonly spellcheck="false" aria-describedby="error"></textarea>
+        </div>
+
+        <p class="error-message" id="error" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
